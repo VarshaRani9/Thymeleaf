@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>conditional statement</title>
+</head>
+<body>
+	<h2>conditional statement</h2>
+	
+	<h3>Elvis Operator</h3>
+	<h5>User is : <span th:style="${isActive}? 'color:green': 'color:red'" th:text="${isActive}? 'Active' : 'Not Active'"></span></h5>
+	
+	<h3>If-Unless Operator</h3>
+	<h5>
+		Gender is : 
+		<span th:if="${gender}=='M'">Male</span>
+		<span th:unless="${gender}=='M'">FeMale</span>
+	</h5>
+	
+	<h3>Switch-Case Operator</h3>
+	<div th:switch="${myList.size()}">
+		<h5 th:case="0">List Contain no elements</h5>
+		<h5 th:case="1">List Contain 1 elements</h5>
+		<h5 th:case="*">List Contain more than 1 elements</h5>
+	</div>
+</body>
+</html>

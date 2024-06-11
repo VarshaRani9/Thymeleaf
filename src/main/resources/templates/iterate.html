@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>Traversing elements in collection</h3>
+	<h5 th:text="${names}"></h5>
+	<ul>
+		<li th:each="n,status : ${names}"><span th:style="${status.odd}? 'color:red' : 'color:green'" th:text="${status.index} +' ' +${n}"></span></li>
+	</ul> 
+</body>
+</html>

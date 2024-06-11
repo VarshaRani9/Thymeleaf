@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>This is About Page</h1>
+	<h3>We are learning Spring Boot</h3>
+	
+	<h5>Name of Owner is : <span th:text="${name}"></span></h5>
+	<p>Length of name is : <span th:text="${name.length()}"></span></p>
+	<h5>Current Date Time is : <span th:text="${currentDate}"></span></h5>
+	<div th:with="a=5, b=6, n=${name}">
+		<h5>Value of a is: <span th:text="${a}"></span></h5>
+		<h5>Value of b is: <span th:text="${b}"></span></h5>
+		<h5>Value of n is: <span th:text="${n}"></span></h5>
+		<h5 th:text="'sum of ' +${a} + ' and ' +${b}+' is :'+${a+b}"></h5>
+	</div>
+</body>
+</html>
